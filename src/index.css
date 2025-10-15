@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@keyframes fade-in {
+@keyframes fade-
+
+ {
   from {
     opacity: 0;
     transform: scale(0.95);
