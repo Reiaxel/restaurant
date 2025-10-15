@@ -10,11 +10,20 @@ export const products: Product[] = [
   description:'',
     price: 1000000,
     image: '/imagenes/burguerclasica.jpeg?auto=compress&cs=tinysrgb&w=800',
-    ingredients: ['carne 120g','Pan', 'Carne 120g', 'Lechuga', 'Tomate', 'Cebolla', 'Queso ,panceta', 'Salsa ketchup mayonesa mostaza ajo'],
+    ingredients: ['carne 120g','Pan', 'Carne 120g', 'Lechuga', 'Tomate', 'Cebolla', 'Queso ,huevo', 'Salsa ketchup mayonesa mostaza ajo'],
     category: 'Clásicas'
   },
   {
     id: 2,
+    name: ' chuleta ahumada',
+  description:'',
+    price: 1000000,
+    image: '/imagenes/bueguerchuleta.jpeg?auto=compress&cs=tinysrgb&w=800',
+    ingredients: ['chuleta ahumada 120g','Pan', 'maiz', 'Lechuga', 'Tomate', 'Cebolla','jamon', 'Queso', 'Salsa ketchup mayonesa mostaza ajo'],
+    category: 'Clásicas'
+  },
+  {
+    id: 3,
     name: 'Doble Carne',
     description: '',
     price: 1300000,
@@ -23,7 +32,7 @@ export const products: Product[] = [
     category: 'Especiales'
   },
   {
-    id: 3,
+    id: 4,
     name: 'hamburguesa de pollo',
     description: '',
     price: 1000000,
@@ -33,7 +42,7 @@ export const products: Product[] = [
     category: 'Especiales'
   },
   {
-    id: 4,
+    id: 5,
     name: 'haburguesa doble mixta',
     description: '',
     price: 1300000,
@@ -42,7 +51,7 @@ export const products: Product[] = [
     category: 'Vegetarianas'
   },
   {
-    id: 5,
+    id: 6,
     name: 'haburguesa triple',
     description: '',
     price: 1450000,
@@ -51,7 +60,7 @@ export const products: Product[] = [
     category: 'Especiales'
   },
   {
-    id: 6,
+    id: 7,
     name: 'Reko malta',
     description: '475ml',
     price: 300000,
@@ -60,10 +69,10 @@ export const products: Product[] = [
     category: 'Premium'
   },
   {
-     id: 7,
+     id: 8,
     name: 'Rekolita',
     description: '500ml',
-    price: 300000,
+    price: 250000,
     image: '/imagenes/rekolita.jpeg?auto=compress&cs=tinysrgb&w=800',
     ingredients: [],
     category: 'Premium'

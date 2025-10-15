@@ -1,9 +1,10 @@
-import { useState } from 'react';
-import { ShoppingCart, Flame } from 'lucide-react';
-import { ProductCard } from './components/ProductCard';
-import { Cart } from './components/Cart';
-import { products } from './data/products';
-import { Product, CartItem } from './types';
+import { useState } from "react";
+import { ShoppingCart, Flame } from "lucide-react";
+import { ProductCard } from "./components/ProductCard";
+import { Cart } from "./components/Cart";
+import { products } from "./data/products";
+import { Product, CartItem } from "./types";
+import StoreStatusAlert from "./components/StoreStatusAlert"
 function App() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -41,7 +42,11 @@ function App() {
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black relative">
+      {/* ✅ Alerta de estado del local */}
+      <StoreStatusAlert />
+
+      {/* 🔥 Header */}
       <header className="bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 shadow-2xl sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
@@ -75,14 +80,15 @@ function App() {
         </div>
       </header>
 
+      {/* 🍔 Menú principal */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600 mb-4">
             Nuestro Menú
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Hamburguesas venezolanas preparadas al mejor estilos de las calles del hambre
-            ¡Elegí tu favorita!
+            Hamburguesas venezolanas preparadas al mejor estilo de las calles
+            del hambre ¡Elegí tu favorita!
           </p>
         </div>
 
@@ -106,6 +112,7 @@ function App() {
         </div>
       </main>
 
+      {/* ⚫ Footer */}
       <footer className="bg-black text-gray-400 py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm">
@@ -115,6 +122,7 @@ function App() {
         </div>
       </footer>
 
+      {/* 🛒 Carrito */}
       {isCartOpen && (
         <Cart
           items={cartItems}

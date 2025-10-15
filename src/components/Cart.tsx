@@ -153,7 +153,7 @@ export function Cart({ items, onClose, onUpdateQuantity, onRemoveItem }: CartPro
                 value={customerInfo.name}
                 onChange={(e) => setCustomerInfo({ ...customerInfo, name: e.target.value })}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
-                placeholder="Juan Pérez"
+                placeholder="nombre"
               />
             </div>
 
@@ -165,7 +165,7 @@ export function Cart({ items, onClose, onUpdateQuantity, onRemoveItem }: CartPro
                 value={customerInfo.phone}
                 onChange={(e) => setCustomerInfo({ ...customerInfo, phone: e.target.value })}
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all"
-                placeholder="11 1234 5678"
+                placeholder="11 1234 567"
               />
             </div>
 
